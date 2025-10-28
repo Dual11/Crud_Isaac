@@ -3,7 +3,7 @@
 
     include_once('delete.php');
     
-    $conexion=abrir_conexion("127.0.0.1","alex1","root","isaac");
+    $conexion=abrir_conexion("localhost","root","","isaac");
     $consulta="SELECT * from items";
     $query=mysqli_query($conexion,$consulta);
 ?>
@@ -18,6 +18,7 @@
 
 </head>
 <body>
+    <a href="index.php">Inicio</a>
     <h1>Lista de items</h1>
     <?php
         while($row=mysqli_fetch_assoc($query)){?>
@@ -26,7 +27,6 @@
                 <?= $row['nombre']; ?>
             
                 <a href="delete.php?id=<?= $row['id_item']; ?>">Eliminar</a>
-                <a href="editar.php?id=<?= $row['id_item']; ?>">Editar</a>
             </div>";
         <?php }
         /*

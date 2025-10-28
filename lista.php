@@ -26,6 +26,7 @@
                 <?= $row['nombre']; ?>
             
                 <a href="delete.php?id=<?= $row['id_item']; ?>">Eliminar</a>
+                <a href="editar.php?id=<?= $row['id_item']; ?>">Editar</a>
             </div>";
         <?php }
         /*

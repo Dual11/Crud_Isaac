@@ -2,8 +2,6 @@
 include_once('conexionBD.php');
 include_once('lista.php');
 
-
-
 if(isset($_GET['id'])){
 
 /*

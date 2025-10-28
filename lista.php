@@ -26,7 +26,7 @@
             <div>
                 <?= $row['nombre']; ?>
             
-                <a href="delete.php?id=<?= $row['id_item']; ?>">Eliminar</a>
+                <a href="delete.php?id=<?= $row['id_item']; ?>" onclick="return confirmarDoble()">Eliminar</a>
             </div>";
         <?php }
         /*
